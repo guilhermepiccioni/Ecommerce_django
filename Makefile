@@ -1,13 +1,10 @@
 DOCKER_COMPOSE := docker-compose
 FILE_NAME := products
 
-.PHONY: build
-build:
-	$(DOCKER_COMPOSE) up --build
 
-.PHONY: run
-run:
-	$(DOCKER_COMPOSE) up
+.PHONY: run_services
+run_services:
+	$(DOCKER_COMPOSE) up -d --build
 
 .PHONY: create_pytest_cov
 create_pytest_cov:
@@ -32,3 +29,10 @@ superuser:
 .PHONY: loaddata
 loaddata:
 	$(DOCKER_COMPOSE) exec web python manage.py loaddata $(FILE_NAME)
+
+
+########## Starting the background
+
+.PHONY:start
+start: run_services makemigrations migrate superuser loaddata pytest
+	$(DOCKER_COMPOSE) up
