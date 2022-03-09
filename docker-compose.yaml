@@ -1,9 +1,25 @@
-services:
+version: "3.8"
 
-  django_postgres_db:
-    image: postgres:14.0
+services:
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - 8000:8000
+    depends_on:
+      - db_ecommerce
+
+  db_ecommerce:
+    image: postgres:14
     environment:
-      - POSTGRES_DB=ecommerce_db
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
-    container_name: django_postgres_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    container_name:
+      db_ecommerce
+
+volumes:
+  postgres_data:
