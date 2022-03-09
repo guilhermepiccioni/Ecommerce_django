@@ -1,4 +1,5 @@
 DOCKER_COMPOSE := docker-compose
+FILE_NAME := products
 
 .PHONY: build
 build:
@@ -27,3 +28,7 @@ migrate:
 .PHONY: superuser
 superuser:
 	$(DOCKER_COMPOSE) exec web python manage.py createsuperuser
+
+.PHONY: loaddata
+loaddata:
+	$(DOCKER_COMPOSE) exec web python manage.py loaddata $(FILE_NAME)

@@ -1,0 +1,127 @@
+[
+    {
+        "model": "products.category",
+        "pk": 2,
+        "fields": {
+            "created": "2020-11-29T19:48:50.913Z",
+            "modified": "2020-11-29T19:48:50.913Z",
+            "name": "Smartwatch",
+            "slug": "smartwatch"
+        }
+    },
+    {
+        "model": "products.category",
+        "pk": 3,
+        "fields": {
+            "created": "2020-11-29T19:48:53.913Z",
+            "modified": "2020-11-29T19:48:53.913Z",
+            "name": "Celulares",
+            "slug": "celulares"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 3,
+        "fields": {
+            "created": "2020-11-29T22:08:23.477Z",
+            "modified": "2020-11-29T22:08:23.477Z",
+            "category": 3,
+            "name": "Celular Samsung Galaxy A02",
+            "slug": "Samsung-Galaxy-A02",
+            "image": "products/2020/11/29/Samsung-Galaxy-A02.jpg",
+            "description": "Celular muito bom da Samsung",
+            "price": "1599.00",
+            "is_available": true
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 4,
+        "fields": {
+            "created": "2020-11-29T22:08:45.715Z",
+            "modified": "2020-11-29T22:08:45.715Z",
+            "category": 3,
+            "name": "Celular Samsung Galaxy A52",
+            "slug": "Samsung-Galaxy-A52",
+            "image": "products/2020/11/29/Samsung-Galaxy-A52.jpg",
+            "description": "Celular muito bom com varias qualidades",
+            "price": "2500.00",
+            "is_available": true
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 5,
+        "fields": {
+            "created": "2020-11-29T22:09:04.836Z",
+            "modified": "2020-11-29T22:09:04.836Z",
+            "category": 3,
+            "name": "Celular Samsung Galaxy M32",
+            "slug": "Samsung-Galaxy-M32",
+            "image": "products/2020/11/29/Samsung-Galaxy-M32.jpg",
+            "description": "Celular otima qualidade e custo beneficio",
+            "price": "1900.00",
+            "is_available": true
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 6,
+        "fields": {
+            "created": "2020-11-29T22:09:21.705Z",
+            "modified": "2020-11-29T22:09:21.705Z",
+            "category": 2,
+            "name": "Relogio Iwo 13",
+            "slug": "Smartwhatch-Iwo-13",
+            "image": "products/2020/11/29/Smartwhatch-Iwo-13.jpg",
+            "description": "Otimo relogio e com muitas funcoes",
+            "price": "350.00",
+            "is_available": true
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 7,
+        "fields": {
+            "created": "2020-11-29T22:09:36.915Z",
+            "modified": "2020-11-29T22:09:36.915Z",
+            "category": 2,
+            "name": "Smartwhatch D-20 Branco",
+            "slug": "Smartwhatch-D-20-Branco",
+            "image": "products/2020/11/29/Smartwhatch-D-20-Branco.jpg",
+            "description": "Otimo relogio para caminhadas e esportes",
+            "price": "90.00",
+            "is_available": true
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 8,
+        "fields": {
+            "created": "2020-11-29T22:12:40.565Z",
+            "modified": "2020-11-29T22:12:40.565Z",
+            "category": 2,
+            "name": "Smartwhatch D-20 Preto",
+            "slug": "Smartwhatch-D-20-Preto",
+            "image": "products/2020/11/29/Smartwhatch-D-20-Preto.jpg",
+            "description": "Otimo relogio para caminhadas e esportes",
+            "price": "90.00",
+            "is_available": true
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 9,
+        "fields": {
+            "created": "2020-11-29T22:12:56.697Z",
+            "modified": "2020-11-29T22:12:56.697Z",
+            "category": 2,
+            "name": "Smartwatch Samsung",
+            "slug": "Smartwhatch-Samsung",
+            "image": "products/2020/11/29/Smartwhatch-Samsung.jpg",
+            "description": "Otimo relogio com designer social",
+            "price": "1049.90",
+            "is_available": true
+        }
+    }
+]
