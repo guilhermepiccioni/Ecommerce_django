@@ -1,0 +1,9 @@
+services:
+
+  django_postgres_db:
+    image: postgres:14.0
+    environment:
+      - POSTGRES_DB=ecommerce_db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    container_name: django_postgres_db
