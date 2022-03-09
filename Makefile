@@ -14,7 +14,7 @@ create_pytest_cov:
 
 .PHONY: pytest
 pytest:
-	$(DOCKER_COMPOSE) exec web pytest -x -v
+	$(DOCKER_COMPOSE) exec web pytest -x -v --cov
 
 .PHONY: makemigrations
 makemigrations:
