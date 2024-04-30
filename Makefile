@@ -36,3 +36,18 @@ loaddata:
 .PHONY:start
 start: run_services makemigrations migrate superuser loaddata pytest
 	$(DOCKER_COMPOSE) up
+
+########## Clean the background
+
+.PHONY: clean_local
+clean_local:
+	$(DOCKER_COMPOSE) down -v --remove-orphans
+	$(DOCKER) system prune -af
+
+.PHONY: clean
+clean:
+	@echo "Cleaning up containers, images, volumes..."
+	$(DOCKER) rm -f $(shell $(DOCKER) ps -aq)    	# Remove all containers
+	$(DOCKER) rmi -f $(shell $(DOCKER) images -aq)	# Remove all images
+	$(DOCKER) volume prune -f						# Remove all volumes
+	$(DOCKER) system prune -f						# Cleaner the cache in system
